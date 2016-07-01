@@ -1,34 +1,73 @@
-GEM
-  remote: http://rubygems.org/
+PATH
+  remote: .
   specs:
-    builder (3.0.0)
-    crack (0.1.8)
-    diff-lcs (1.1.2)
-    git (1.2.5)
-    jeweler (1.5.2)
-      bundler (~> 1.0.0)
-      git (>= 1.2.5)
-      rake
-    rake (0.8.7)
-    rspec (2.3.0)
-      rspec-core (~> 2.3.0)
-      rspec-expectations (~> 2.3.0)
-      rspec-mocks (~> 2.3.0)
-    rspec-core (2.3.1)
-    rspec-expectations (2.3.0)
-      diff-lcs (~> 1.1.2)
-    rspec-mocks (2.3.0)
-    savon (0.7.9)
-      builder (>= 2.1.2)
-      crack (>= 0.1.4)
-    yard (0.6.4)
+    pvwatts (1.0.0.beta)
+      addressable
+      virtus
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.4.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.2.5)
+    equalizer (0.0.11)
+    hashdiff (0.3.0)
+    ice_nine (0.11.2)
+    method_source (0.8.2)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rake (11.2.2)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    safe_yaml (1.0.4)
+    slop (3.6.0)
+    thread_safe (0.3.5)
+    vcr (3.0.3)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+    webmock (2.1.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
-  jeweler (~> 1.5.2)
-  rspec (~> 2.3.0)
-  savon (~> 0.7.6)
-  yard (>= 0.6.4)
+  bundler (~> 1.11)
+  pry
+  pvwatts!
+  rake (~> 11.2.2)
+  rspec (~> 3.4.0)
+  vcr
+  webmock
+
+BUNDLED WITH
+   1.11.0

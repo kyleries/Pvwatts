@@ -1,17 +1,20 @@
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+require 'pry'
 require 'rspec'
-require 'pvwatts'
-require 'savon'
+require 'vcr'
+require 'webmock/rspec'
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+require 'pvwatts'
+
 
 # Set this constant to run the tests
 PVWATTS_SPEC_KEY = nil
-raise "You first need to set the PVWATTS_SPEC_KEY constant in spec_helper.rb" if PVWATTS_SPEC_KEY.nil?
+if PVWATTS_SPEC_KEY.nil?
+  raise 'You first need to set the PVWATTS_SPEC_KEY constant in spec_helper.rb'
+end
 
-RSpec.configure do |config|
-  
+RSpec.configure do |config|; end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/cassettes"
+  config.hook_into :webmock
 end
